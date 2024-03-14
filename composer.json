@@ -1,0 +1,22 @@
+{
+  "name": "pimcorecasts/mjml-template-bundle",
+  "description": "Pimcorecasts Mjml Template Bundle",
+  "type": "pimcore-bundle",
+  "license": "GPL-3.0",
+  "require": {
+    "pimcore/pimcore": ">=10",
+    "qferr/mjml-twig": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pimcorecasts\\Bundle\\MjmlTemplate\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "Pimcorecasts\\Bundle\\MjmlTemplate"
+      ]
+    }
+  }
+}

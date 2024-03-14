@@ -1,0 +1,10 @@
+services:
+    mjml_renderer:
+        class: Qferrer\Mjml\Renderer\BinaryRenderer
+        arguments:
+            - '%kernel.project_dir%/node_modules/.bin/mjml'
+
+    Pimcorecasts\Bundle\MjmlTemplate\Twig\MjmlExtension:
+        arguments:
+            - '@mjml_renderer'
+        tags: [ twig.extension ]
