@@ -49,3 +49,30 @@ In your `config/services.yaml` add following:
             - '@Pimcorecasts\Bundle\MjmlTemplate\Services\DockerMjmlApi'
 ```
 
+## Usage
+
+Now you can create a layout like `layout/email.html.twig`
+```html
+{% mjml %}
+
+    <mjml>
+        <mj-body width="580px">
+            <mj-wrapper background-color="#fff" border="1px solid #e7e7e7" border-top="0" border-bottom="0" padding="0">
+                {{ block('content') }}
+            </mj-wrapper>
+        </mj-body>
+    </mjml>
+
+{% endmjml %}
+```
+
+Add a `email/content.html.twig`:
+```html
+{% extends 'email/layout.html.twig' %}
+
+{% block content %}
+    <mj-text mj-class="btn-primary">
+        Your Pimcore email template
+    </mj-text>
+{% endblock %}
+```
